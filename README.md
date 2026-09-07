@@ -27,7 +27,7 @@ English: [README.en.md](README.en.md)
 
 | 期 | 内容 | 结论 |
 |---|---|---|
-| (首期制作中) | — | — |
+| [2026-W36](results/2026-W36.md) | gpt-6-astra-900k 五档(low→max)全库 | 不单调:12→14→14→10→10;medium 是甜点,xhigh/max 反噬;顶档 UI 案零交付 |
 
 ## 免责
 

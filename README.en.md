@@ -27,7 +27,7 @@ The same model on the same provider can score differently across runs — servin
 
 | Issue | Content | Verdict |
 |---|---|---|
-| (first issue in preparation) | — | — |
+| [2026-W36](results/2026-W36.md) | gpt-6-astra-900k at five effort bands, full library | Non-monotonic: 12→14→14→10→10; medium is the sweet spot, xhigh/max backfire; zero delivery on the UI case at top bands |
 
 ## Disclaimer
 
