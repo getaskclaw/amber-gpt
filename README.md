@@ -28,7 +28,7 @@ English: [README.en.md](README.en.md)
 | 期 | 内容 | 结论 |
 |---|---|---|
 | [2026-W36](results/2026-W36.md) | gpt-6-astra-900k 五档(low→max)全库 | 不单调:12→14→14→10→10;medium 是甜点,xhigh/max 反噬;顶档 UI 案零交付 |
-| [2026-W37](results/2026-W37.md) | gpt-5.6-luna-900k 三档 + gpt-5.6-sol-900k 两档(23 案新库) | luna 三档同分同名单(15/23),effort 零收益,xhigh=2.9x 纯浪费;sol 无一档赢 luna;xhigh 超时墙再现顶档反噬 |
+| [2026-W37](results/2026-W37.md) | gpt-5.6-luna-900k 三档 + gpt-5.6-sol-900k 两档(23 案新库);astra 裸 base 补考 2 新案(addendum) | luna 三档同分同名单(15/23),effort 零收益,xhigh=2.9x 纯浪费;sol 无一档赢 luna;xhigh 超时墙再现顶档反噬;astra 补考全过→合成 16/23(-900k 变体已被收回,口径混合已标注) |
 
 ## 免责
 
