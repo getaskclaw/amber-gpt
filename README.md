@@ -23,6 +23,17 @@ English: [README.en.md](README.en.md)
 
 同名模型、同 provider，两次跑也可能不同分——推理参数、负载、服务端版本都在漂。所以这里的一切结论都带日期与档位，且按周重测。单日数字是快照，不是定律。
 
+## 图说数据
+
+- **本期成绩单**（2026-W37，23 案全库）：luna 三档同一张 15/23，sol 两档 14/23，astra 合成口径 16/23；sol xhigh 中止不进图。
+  ![W37 成绩单：分组柱，色 = effort 档](docs/images/scorecard-2026-w37.png)
+- **案面画像**（2026-W37 Full matrix 按 face 聚合）：luna 与 sol 分面通过率几乎重合，唯一差在运维面（A-24bcf707）。
+  ![案面画像：luna vs sol 雷达](docs/images/face-profile-2026-w37.png)
+- **周趋势**（W36→W37，按通过率 % 归一）：astra 66.7%→69.6%（W37 为合成口径），luna 65.2%、sol 60.9% 本周首秀。
+  ![周趋势：案级通过率](docs/images/weekly-trend-2026.png)
+- **档位天梯**（W36 astra 五档 + W37 luna/sol）：加档零收益——token 最多涨到 2.9 倍，分数不动。
+  ![档位天梯：effort × 通过率，点标 = 输出 token](docs/images/effort-ladder-2026.png)
+
 ## 结果索引
 
 | 期 | 内容 | 结论 |

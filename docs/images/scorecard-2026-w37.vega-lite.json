@@ -1,0 +1,250 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": [
+   "W37 成绩单：luna 三档同一张 15/23",
+   "（23 案全库；色 = effort 档）"
+  ],
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "astra 16/23 为 14 + 2 合成口径；sol xhigh 中止（双 1800s 超时墙 + 文本案白卷），不计分、不进图",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "data": {
+  "values": [
+   {
+    "model": "luna",
+    "band": "medium",
+    "pass": 15
+   },
+   {
+    "model": "luna",
+    "band": "high",
+    "pass": 15
+   },
+   {
+    "model": "luna",
+    "band": "xhigh",
+    "pass": 15
+   },
+   {
+    "model": "sol",
+    "band": "medium",
+    "pass": 14
+   },
+   {
+    "model": "sol",
+    "band": "high",
+    "pass": 14
+   },
+   {
+    "model": "astra",
+    "band": "high",
+    "pass": 16,
+    "note": "（合成口径）"
+   }
+  ]
+ },
+ "width": 520,
+ "height": 300,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+   },
+   "encoding": {
+    "x": {
+     "field": "model",
+     "type": "nominal",
+     "sort": [
+      "luna",
+      "sol",
+      "astra"
+     ],
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "xOffset": {
+     "field": "band",
+     "type": "nominal"
+    },
+    "y": {
+     "field": "pass",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       23
+      ]
+     },
+     "axis": {
+      "title": "通过案数（/ 23）",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       23
+      ]
+     }
+    },
+    "color": {
+     "field": "band",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "medium",
+       "high",
+       "xhigh"
+      ],
+      "range": [
+       "#A5E8F0",
+       "#26C6DA",
+       "#00838F"
+      ]
+     },
+     "legend": {
+      "title": "档位"
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "bottom",
+    "dy": -5,
+    "fontSize": 13,
+    "color": "#006064"
+   },
+   "encoding": {
+    "x": {
+     "field": "model",
+     "type": "nominal",
+     "sort": [
+      "luna",
+      "sol",
+      "astra"
+     ],
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "xOffset": {
+     "field": "band",
+     "type": "nominal"
+    },
+    "y": {
+     "field": "pass",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       23
+      ]
+     },
+     "axis": {
+      "title": "通过案数（/ 23）",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       23
+      ]
+     }
+    },
+    "text": {
+     "field": "pass",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "transform": [
+    {
+     "filter": {
+      "field": "model",
+      "equal": "astra"
+     }
+    }
+   ],
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "bottom",
+    "dy": -22,
+    "fontSize": 10,
+    "color": "#8D6E63"
+   },
+   "encoding": {
+    "x": {
+     "field": "model",
+     "type": "nominal",
+     "sort": [
+      "luna",
+      "sol",
+      "astra"
+     ],
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "xOffset": {
+     "field": "band",
+     "type": "nominal"
+    },
+    "y": {
+     "field": "pass",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       23
+      ]
+     },
+     "axis": {
+      "title": "通过案数（/ 23）",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       23
+      ]
+     }
+    },
+    "text": {
+     "field": "note",
+     "type": "nominal"
+    }
+   }
+  }
+ ]
+}

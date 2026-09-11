@@ -23,6 +23,17 @@ Weekly public benchmark results of GPT-family models (across reasoning-effort ba
 
 The same model on the same provider can score differently across runs — serving versions, load, and parameters drift. Everything here carries a date and an effort band, and is re-measured weekly. A single day's number is a snapshot, not a law.
 
+## Charts
+
+- **Report card** (2026-W37, 23-case library): luna posts the same 15/23 at all three bands, sol 14/23 at two, astra 16/23 on a blended tally; sol xhigh aborted and excluded.
+  ![W37 report card: grouped bars, color = effort band](docs/images/scorecard-2026-w37.en.png)
+- **Face profile** (W37 full matrix, grouped by face): luna and sol nearly overlap; the only gap is ops (A-24bcf707).
+  ![Face profile radar: luna vs sol](docs/images/face-profile-2026-w37.en.png)
+- **Weekly trend** (W36 to W37, normalized to pass rate): astra 66.7% to 69.6% (W37 blended), luna 65.2% and sol 60.9% debut.
+  ![Weekly trend: case-level pass rate](docs/images/weekly-trend-2026.en.png)
+- **Effort ladder** (W36 astra five bands + W37 luna/sol): more effort, zero gain — up to 2.9x the tokens, same score.
+  ![Effort ladder: effort vs pass rate, point labels = output tokens](docs/images/effort-ladder-2026.en.png)
+
 ## Results index
 
 | Issue | Content | Verdict |

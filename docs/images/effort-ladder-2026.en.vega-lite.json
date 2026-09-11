@@ -1,0 +1,274 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": [
+   "Effort ladder: more effort, zero gain",
+   "(W36 astra five bands /21 cases; W37 luna three, sol two /23)"
+  ],
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "point labels = output tokens (cost proxy); sol xhigh aborted, unscored and excluded",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "data": {
+  "values": [
+   {
+    "band": "low",
+    "pct": 57.1,
+    "tokens": "77K",
+    "series": "astra (W36)",
+    "dy": -13
+   },
+   {
+    "band": "medium",
+    "pct": 66.7,
+    "tokens": "81K",
+    "series": "astra (W36)",
+    "dy": -13
+   },
+   {
+    "band": "high",
+    "pct": 66.7,
+    "tokens": "147K",
+    "series": "astra (W36)",
+    "dy": -13
+   },
+   {
+    "band": "xhigh",
+    "pct": 47.6,
+    "tokens": "225K",
+    "series": "astra (W36)",
+    "dy": -13
+   },
+   {
+    "band": "max",
+    "pct": 47.6,
+    "tokens": "195K",
+    "series": "astra (W36)",
+    "dy": -13
+   },
+   {
+    "band": "medium",
+    "pct": 65.2,
+    "tokens": "104K",
+    "series": "luna (W37)",
+    "dy": 15
+   },
+   {
+    "band": "high",
+    "pct": 65.2,
+    "tokens": "239K",
+    "series": "luna (W37)",
+    "dy": 15
+   },
+   {
+    "band": "xhigh",
+    "pct": 65.2,
+    "tokens": "303K",
+    "series": "luna (W37)",
+    "dy": 15
+   },
+   {
+    "band": "medium",
+    "pct": 60.9,
+    "tokens": "204K",
+    "series": "sol (W37)",
+    "dy": 15
+   },
+   {
+    "band": "high",
+    "pct": 60.9,
+    "tokens": "175K",
+    "series": "sol (W37)",
+    "dy": 15
+   }
+  ]
+ },
+ "width": 520,
+ "height": 320,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "low",
+       "medium",
+       "high",
+       "xhigh",
+       "max"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       40,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "color": {
+     "field": "series",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "astra (W36)",
+       "luna (W37)",
+       "sol (W37)"
+      ],
+      "range": [
+       "#6A5ACD",
+       "#00838F",
+       "#E67E22"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "size": 110,
+    "filled": true,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "low",
+       "medium",
+       "high",
+       "xhigh",
+       "max"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       40,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "color": {
+     "field": "series",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "astra (W36)",
+       "luna (W37)",
+       "sol (W37)"
+      ],
+      "range": [
+       "#6A5ACD",
+       "#00838F",
+       "#E67E22"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "middle",
+    "fontSize": 10,
+    "color": "#555"
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "low",
+       "medium",
+       "high",
+       "xhigh",
+       "max"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       40,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "text": {
+     "field": "tokens",
+     "type": "nominal"
+    },
+    "dy": {
+     "field": "dy",
+     "type": "quantitative"
+    }
+   }
+  }
+ ]
+}

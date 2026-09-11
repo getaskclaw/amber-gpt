@@ -1,0 +1,251 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": [
+   "Weekly trend: different denominators, normalized to pass rate",
+   "(W36 = 21 cases, W37 = 23)"
+  ],
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "astra W37 is a 14 + 2 blended tally; luna / sol debut this week, one point each",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "data": {
+  "values": [
+   {
+    "week": "W36",
+    "model": "astra",
+    "pct": 66.7,
+    "label": "14/21 · 66.7%",
+    "dy": -14
+   },
+   {
+    "week": "W37",
+    "model": "astra",
+    "pct": 69.6,
+    "label": "16/23 · 69.6%",
+    "dy": -14
+   },
+   {
+    "week": "W37",
+    "model": "luna",
+    "pct": 65.2,
+    "label": "15/23 · 65.2%",
+    "dy": 16
+   },
+   {
+    "week": "W37",
+    "model": "sol",
+    "pct": 60.9,
+    "label": "14/23 · 60.9%",
+    "dy": 16
+   }
+  ]
+ },
+ "width": 420,
+ "height": 300,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "transform": [
+    {
+     "filter": {
+      "field": "model",
+      "equal": "astra"
+     }
+    }
+   ],
+   "mark": {
+    "type": "line",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "week",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "W36",
+       "W37"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       55,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "color": {
+     "field": "model",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "astra",
+       "luna",
+       "sol"
+      ],
+      "range": [
+       "#6A5ACD",
+       "#00838F",
+       "#E67E22"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "point",
+    "size": 110,
+    "filled": true,
+    "opacity": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "week",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "W36",
+       "W37"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       55,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "color": {
+     "field": "model",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "astra",
+       "luna",
+       "sol"
+      ],
+      "range": [
+       "#6A5ACD",
+       "#00838F",
+       "#E67E22"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "baseline": "middle",
+    "fontSize": 11,
+    "color": "#333"
+   },
+   "encoding": {
+    "x": {
+     "field": "week",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "W36",
+       "W37"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 13
+     }
+    },
+    "y": {
+     "field": "pct",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       55,
+       75
+      ]
+     },
+     "axis": {
+      "title": "case-level pass rate (%)"
+     }
+    },
+    "text": {
+     "field": "label",
+     "type": "nominal"
+    },
+    "dy": {
+     "field": "dy",
+     "type": "quantitative"
+    },
+    "color": {
+     "field": "model",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "astra",
+       "luna",
+       "sol"
+      ],
+      "range": [
+       "#6A5ACD",
+       "#00838F",
+       "#E67E22"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    }
+   }
+  }
+ ]
+}
