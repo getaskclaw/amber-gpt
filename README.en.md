@@ -1,7 +1,7 @@
 # amber-gpt
 
 Weekly public benchmark results of GPT-family models (across reasoning-effort bands) on the private **AMBER** suite — cases private, results public.
-中文: [README.md](README.md)
+中文： [README.md](README.md)
 
 ## What this is
 
