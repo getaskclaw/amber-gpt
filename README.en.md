@@ -8,7 +8,7 @@ Weekly public benchmark results of GPT-family models (across reasoning-effort ba
 - One issue per week at `results/YYYY-Www.md`: same cases, same harness, full library; the same model at different effort bands side by side.
 - Every issue reports: case-set size and hashes, per-case d2 scores and pass/fail, terminal states, token usage and latency, environment fingerprint, and qualitative verdicts written under evidence discipline.
 - Cases, oracles, transcripts, and intermediate artifacts are **never published** (see "Publication discipline").
-- Sister repos: [amber-crof](https://github.com/getaskclaw/amber-crof) (CrofAI weekly), [amber-ollama](https://github.com/getaskclaw/amber-ollama) (Ollama Cloud weekly).
+- Sister repos: [amber-crof](https://github, [amber-workbuddy](https://github.com/getaskclaw/amber-workbuddy) (WorkBuddy ACP lane).com/getaskclaw/amber-crof) (CrofAI weekly), [amber-ollama](https://github.com/getaskclaw/amber-ollama) (Ollama Cloud weekly).
 - The AMBER suite spec and case-authoring tools live at [getaskclaw/amber](https://github.com/getaskclaw/amber); the case contents themselves are private.
 
 ## Publication discipline (red lines)
