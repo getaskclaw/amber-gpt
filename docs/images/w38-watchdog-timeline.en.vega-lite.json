@@ -1,0 +1,504 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "padding": {
+  "left": 150,
+  "right": 30,
+  "top": 10,
+  "bottom": 30
+ },
+ "title": {
+  "text": "Same paper, only client timeouts changed: killed at 120s vs delivered at 178s",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "ui-build case A-d9b79b46; old watchdog tiers (12/90/120s, picked by prompt size) all land inside the no-first-token zone (yellow, <170s) → 3 retries, same wall, misrecorded \"zero delivery\"",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 640,
+ "height": 150,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0,
+      "x2": 170,
+      "y0": 0.66,
+      "y1": 1.34
+     },
+     {
+      "x": 0,
+      "x2": 170,
+      "y0": -0.34,
+      "y1": 0.34
+     }
+    ]
+   },
+   "mark": {
+    "type": "rect",
+    "color": "#fdf0c8"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "x2": {
+     "field": "x2"
+    },
+    "y": {
+     "field": "y0",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "y2": {
+     "field": "y1"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 0,
+      "t2": 650,
+      "y": 1
+     },
+     {
+      "t": 0,
+      "t2": 650,
+      "y": 0
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#ddd",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "x2": {
+     "field": "t2"
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 12,
+      "y0": 0.68,
+      "y1": 1.32,
+      "c": "#c0392b"
+     },
+     {
+      "t": 90,
+      "y0": 0.68,
+      "y1": 1.32,
+      "c": "#c0392b"
+     },
+     {
+      "t": 120,
+      "y0": 0.68,
+      "y1": 1.32,
+      "c": "#c0392b"
+     },
+     {
+      "t": 300,
+      "y0": -0.32,
+      "y1": 0.32,
+      "c": "#1e8449"
+     },
+     {
+      "t": 600,
+      "y0": -0.32,
+      "y1": 0.32,
+      "c": "#1e8449"
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "strokeWidth": 2
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y0",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "y2": {
+     "field": "y1"
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 12,
+      "y": 1.46,
+      "lab": "12s",
+      "c": "#c0392b"
+     },
+     {
+      "t": 90,
+      "y": 1.62,
+      "lab": "90s",
+      "c": "#c0392b"
+     },
+     {
+      "t": 120,
+      "y": 1.8,
+      "lab": "120s",
+      "c": "#c0392b"
+     },
+     {
+      "t": 300,
+      "y": -0.54,
+      "lab": "300s",
+      "c": "#1e8449"
+     },
+     {
+      "t": 600,
+      "y": -0.54,
+      "lab": "600s",
+      "c": "#1e8449"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 10.5
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "lab"
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 120,
+      "y": 1,
+      "shape": "cross",
+      "c": "#c0392b"
+     },
+     {
+      "t": 178,
+      "y": 0,
+      "shape": "circle",
+      "c": "#1e8449"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 1,
+    "size": 200,
+    "strokeWidth": 3
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "axis": {
+      "title": "seconds",
+      "values": [
+       0,
+       100,
+       200,
+       300,
+       400,
+       500,
+       600
+      ],
+      "grid": true,
+      "labelFontSize": 11,
+      "titleFontSize": 12
+     },
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "shape": {
+     "field": "shape",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 146,
+      "y": 1.0,
+      "lab": "✗ killed at 120s → \"provider unavailable\"",
+      "c": "#c0392b"
+     },
+     {
+      "t": 204,
+      "y": 0.5,
+      "lab": "✓ real 12/12 delivery at 178s",
+      "c": "#1e8449"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "left",
+    "fontSize": 12.5,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "lab"
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "t": 85,
+      "y": -0.66,
+      "lab": "no-first-token zone 0–170s",
+      "c": "#8a6d00"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "center",
+    "fontSize": 10.5
+   },
+   "encoding": {
+    "x": {
+     "field": "t",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "lab"
+    },
+    "color": {
+     "field": "c",
+     "type": "nominal",
+     "scale": null,
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "y": 1,
+      "lab": "old watchdog (W37)"
+     },
+     {
+      "y": 0,
+      "lab": "relaxed (09-16 makeup)"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "align": "right",
+    "fontSize": 12.5,
+    "color": "#555",
+    "dx": -10
+   },
+   "encoding": {
+    "x": {
+     "datum": 0,
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       650
+      ]
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.95,
+       2.05
+      ]
+     },
+     "axis": null
+    },
+    "text": {
+     "field": "lab"
+    }
+   }
+  }
+ ],
+ "resolve": {
+  "scale": {
+   "x": "shared",
+   "y": "shared"
+  }
+ }
+}

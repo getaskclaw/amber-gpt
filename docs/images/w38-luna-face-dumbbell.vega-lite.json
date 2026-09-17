@@ -1,0 +1,390 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": "luna high → max：增益三面、反噬三面、构建免疫",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "每行一轴，灰点 = high（09-12），彩点 = max（09-17），值 = 完成度；UI 的 +1.00 是看门狗修复混杂，不记 max 之功",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 480,
+ "height": 250,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 11
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "face": "UI（混杂）",
+      "high": 0.0,
+      "max": 1.0
+     },
+     {
+      "face": "需求",
+      "high": 0.5,
+      "max": 1.0
+     },
+     {
+      "face": "视觉",
+      "high": 0.889,
+      "max": 1.0
+     },
+     {
+      "face": "文本",
+      "high": 1.0,
+      "max": 1.0
+     },
+     {
+      "face": "编码",
+      "high": 0.958,
+      "max": 0.958
+     },
+     {
+      "face": "审查",
+      "high": 0.278,
+      "max": 0.278
+     },
+     {
+      "face": "运维",
+      "high": 1.0,
+      "max": 0.967
+     },
+     {
+      "face": "核验",
+      "high": 0.533,
+      "max": 0.35
+     }
+    ]
+   },
+   "mark": {
+    "type": "rule",
+    "color": "#ccc",
+    "strokeWidth": 2.5
+   },
+   "encoding": {
+    "x": {
+     "field": "high",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.05
+      ]
+     }
+    },
+    "x2": {
+     "field": "max"
+    },
+    "y": {
+     "field": "face",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "UI（混杂）",
+       "需求",
+       "视觉",
+       "文本",
+       "编码",
+       "审查",
+       "运维",
+       "核验"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "face": "UI（混杂）",
+      "v": 0.0,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "需求",
+      "v": 0.5,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "视觉",
+      "v": 0.889,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "文本",
+      "v": 1.0,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "编码",
+      "v": 0.958,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "审查",
+      "v": 0.278,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "运维",
+      "v": 1.0,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "核验",
+      "v": 0.533,
+      "band": "high",
+      "dir": "high"
+     },
+     {
+      "face": "UI（混杂）",
+      "v": 1.0,
+      "band": "max",
+      "dir": "conf"
+     },
+     {
+      "face": "需求",
+      "v": 1.0,
+      "band": "max",
+      "dir": "gain"
+     },
+     {
+      "face": "视觉",
+      "v": 1.0,
+      "band": "max",
+      "dir": "gain"
+     },
+     {
+      "face": "文本",
+      "v": 1.0,
+      "band": "max",
+      "dir": "flat"
+     },
+     {
+      "face": "编码",
+      "v": 0.958,
+      "band": "max",
+      "dir": "flat"
+     },
+     {
+      "face": "审查",
+      "v": 0.278,
+      "band": "max",
+      "dir": "flat"
+     },
+     {
+      "face": "运维",
+      "v": 0.967,
+      "band": "max",
+      "dir": "loss"
+     },
+     {
+      "face": "核验",
+      "v": 0.35,
+      "band": "max",
+      "dir": "loss"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 1,
+    "size": 130,
+    "stroke": "white",
+    "strokeWidth": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.05
+      ]
+     },
+     "axis": {
+      "title": "完成度（钉过率）",
+      "values": [
+       0,
+       0.25,
+       0.5,
+       0.75,
+       1.0
+      ],
+      "grid": true
+     }
+    },
+    "y": {
+     "field": "face",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "UI（混杂）",
+       "需求",
+       "视觉",
+       "文本",
+       "编码",
+       "审查",
+       "运维",
+       "核验"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 12.5
+     }
+    },
+    "color": {
+     "field": "dir",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "high",
+       "gain",
+       "flat",
+       "loss",
+       "conf"
+      ],
+      "range": [
+       "#999",
+       "#1e8449",
+       "#5b8fc9",
+       "#c0392b",
+       "#8e44ad"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "offset": 10,
+      "labelExpr": "{'high':'high（09-12）','gain':'max 增益','flat':'持平','loss':'max 反噬','conf':'max · UI（混杂）'}[datum.value]"
+     }
+    },
+    "size": {
+     "field": "band",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "high",
+       "max"
+      ],
+      "range": [
+       190,
+       110
+      ]
+     },
+     "legend": null
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "face": "UI（混杂）",
+      "v": 1.0,
+      "t": "+1.00*"
+     },
+     {
+      "face": "需求",
+      "v": 1.0,
+      "t": "+0.50"
+     },
+     {
+      "face": "视觉",
+      "v": 1.0,
+      "t": "+0.11"
+     },
+     {
+      "face": "文本",
+      "v": 1.0,
+      "t": "0"
+     },
+     {
+      "face": "编码",
+      "v": 0.958,
+      "t": "0"
+     },
+     {
+      "face": "审查",
+      "v": 0.278,
+      "t": "0"
+     },
+     {
+      "face": "运维",
+      "v": 1.0,
+      "t": "-0.03"
+     },
+     {
+      "face": "核验",
+      "v": 0.533,
+      "t": "-0.18"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11,
+    "align": "left",
+    "dx": 10,
+    "color": "#555"
+   },
+   "encoding": {
+    "x": {
+     "field": "v",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       1.05
+      ]
+     }
+    },
+    "y": {
+     "field": "face",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "UI（混杂）",
+       "需求",
+       "视觉",
+       "文本",
+       "编码",
+       "审查",
+       "运维",
+       "核验"
+      ]
+     }
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ]
+}

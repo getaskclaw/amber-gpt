@@ -1,0 +1,283 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": "W37 → W38 复测：点贴对角线 = 同一个脑",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "sol-900k @ high；每点一案，坐标 = 完成度（钉过率）；唯一离线的蓝点 = 平反案；点径 = 该案点数",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 400,
+ "height": 360,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "x": -0.05,
+      "y": -0.05
+     },
+     {
+      "x": 1.05,
+      "y": 1.05
+     }
+    ]
+   },
+   "mark": {
+    "type": "line",
+    "strokeDash": [
+     6,
+     4
+    ],
+    "color": "#bbb",
+    "strokeWidth": 1.5
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 1.0,
+      "y": 1.0,
+      "n": 14,
+      "cat": "same"
+     },
+     {
+      "x": 0.22,
+      "y": 0.22,
+      "n": 2,
+      "cat": "same"
+     },
+     {
+      "x": 0.75,
+      "y": 0.75,
+      "n": 1,
+      "cat": "same"
+     },
+     {
+      "x": 0.44,
+      "y": 0.44,
+      "n": 1,
+      "cat": "same"
+     },
+     {
+      "x": 0.8,
+      "y": 0.6,
+      "n": 1,
+      "cat": "wobble"
+     },
+     {
+      "x": 0.11,
+      "y": 0.22,
+      "n": 1,
+      "cat": "wobble"
+     },
+     {
+      "x": 0.0,
+      "y": 0.47,
+      "n": 1,
+      "cat": "wall"
+     },
+     {
+      "x": 0.0,
+      "y": 0.25,
+      "n": 1,
+      "cat": "wall"
+     },
+     {
+      "x": 0.0,
+      "y": 1.0,
+      "n": 1,
+      "cat": "fix"
+     }
+    ]
+   },
+   "mark": {
+    "type": "point",
+    "filled": true,
+    "opacity": 1,
+    "stroke": "white",
+    "strokeWidth": 1
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.07,
+       1.14
+      ]
+     },
+     "axis": {
+      "title": "W37（09-07）完成度",
+      "values": [
+       0,
+       0.25,
+       0.5,
+       0.75,
+       1.0
+      ],
+      "grid": true
+     }
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       -0.07,
+       1.14
+      ]
+     },
+     "axis": {
+      "title": "W38（09-16）完成度",
+      "values": [
+       0,
+       0.25,
+       0.5,
+       0.75,
+       1.0
+      ],
+      "grid": true
+     }
+    },
+    "size": {
+     "field": "n",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       1,
+       14
+      ],
+      "range": [
+       80,
+       800
+      ]
+     },
+     "legend": null
+    },
+    "color": {
+     "field": "cat",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "same",
+       "wobble",
+       "wall",
+       "fix"
+      ],
+      "range": [
+       "#2e9e5b",
+       "#e8902e",
+       "#9aa0a6",
+       "#3b7dd8"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "offset": 10,
+      "labelExpr": "{'same':'逐项一致 ×18','wobble':'抖动带内 ×2','wall':'考墙→真分 ×2','fix':'平反 ×1'}[datum.value]"
+     }
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0.06,
+      "y": 0.9,
+      "t": "平反：看门狗误杀 → 12/12"
+     },
+     {
+      "x": 0.1,
+      "y": 0.36,
+      "t": "W37 撞考场墙 ∅，今真交付仍挂 ×2"
+     },
+     {
+      "x": 0.88,
+      "y": 0.67,
+      "t": "抖动带内 ×2"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11.5,
+    "color": "#444",
+    "align": "left"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "x": 0.91,
+      "y": 1.1,
+      "t": "14 案逐项相同"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "fontSize": 11.5,
+    "color": "#444",
+    "align": "right"
+   },
+   "encoding": {
+    "x": {
+     "field": "x",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "y",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "t"
+    }
+   }
+  }
+ ]
+}
