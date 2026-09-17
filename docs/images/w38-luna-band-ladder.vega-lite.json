@@ -1,0 +1,207 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": "luna 档位天梯（五档全库 /23 案）：max 账面登顶，剔除混杂与 high 打平",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "max 的 +1（A-d9b79b46 首交付）与 harness 看门狗修复同日生效——任何档重跑都会交付；reasoning 397K ≈ high（154K）× 2.6",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 460,
+ "height": 300,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 11
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "band": "def-medium",
+      "seg": "实得",
+      "v": 16,
+      "ord": 1
+     },
+     {
+      "band": "low",
+      "seg": "实得",
+      "v": 14,
+      "ord": 1
+     },
+     {
+      "band": "medium",
+      "seg": "实得",
+      "v": 14,
+      "ord": 1
+     },
+     {
+      "band": "high",
+      "seg": "实得",
+      "v": 15,
+      "ord": 1
+     },
+     {
+      "band": "max",
+      "seg": "实得",
+      "v": 15,
+      "ord": 1
+     },
+     {
+      "band": "max",
+      "seg": "混杂 +1（看门狗修复）",
+      "v": 1,
+      "ord": 2
+     }
+    ]
+   },
+   "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "def-medium",
+       "low",
+       "medium",
+       "high",
+       "max"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 12
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "aggregate": "sum",
+     "scale": {
+      "domain": [
+       0,
+       23
+      ]
+     },
+     "axis": {
+      "title": "通过案数（/ 23）",
+      "values": [
+       0,
+       5,
+       10,
+       15,
+       20,
+       23
+      ]
+     }
+    },
+    "color": {
+     "field": "seg",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "实得",
+       "混杂 +1（看门狗修复）"
+      ],
+      "range": [
+       "#5b8fc9",
+       "#e8a0a0"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom",
+      "offset": 12
+     }
+    },
+    "order": {
+     "field": "ord",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "band": "def-medium",
+      "total": 16,
+      "label": "16"
+     },
+     {
+      "band": "low",
+      "total": 14,
+      "label": "14"
+     },
+     {
+      "band": "medium",
+      "total": 14,
+      "label": "14"
+     },
+     {
+      "band": "high",
+      "total": 15,
+      "label": "15"
+     },
+     {
+      "band": "max",
+      "total": 16,
+      "label": "16"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": -8,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#333"
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "def-medium",
+       "low",
+       "medium",
+       "high",
+       "max"
+      ]
+     }
+    },
+    "y": {
+     "field": "total",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       23
+      ]
+     }
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  }
+ ]
+}

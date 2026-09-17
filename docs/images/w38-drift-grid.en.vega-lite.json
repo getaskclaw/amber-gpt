@@ -1,0 +1,197 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": "W37 → W38 re-test: zero drift across 23 cases, 1 overturned",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "sol-900k @ high (09-16); one cell per case; \"wall→real fail\" = W37 hit the 1800s harness wall, delivered for real under the 3600s cap and still fails",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 690,
+ "height": 56,
+ "data": {
+  "values": [
+   {
+    "case": "A-0676097b",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-13854d9d",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-1fd3683a",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-24bcf707",
+    "cat": "same fail ×6",
+    "row": 1
+   },
+   {
+    "case": "A-442d4aab",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-47eea242",
+    "cat": "same fail ×6",
+    "row": 1
+   },
+   {
+    "case": "A-569dbe0d",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-61f7ad01",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-641195e2",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-6fbeb363",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-77d62143",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-791e90ac",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-87c472cb",
+    "cat": "same fail ×6",
+    "row": 1
+   },
+   {
+    "case": "A-8c909d0a",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-8d4bc770",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-984e80ee",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-a317e74b",
+    "cat": "wall→real fail ×2",
+    "row": 1
+   },
+   {
+    "case": "A-a5608487",
+    "cat": "same pass ×14",
+    "row": 1
+   },
+   {
+    "case": "A-be92627f",
+    "cat": "same fail ×6",
+    "row": 1
+   },
+   {
+    "case": "A-cdc3d11a",
+    "cat": "same fail ×6",
+    "row": 1
+   },
+   {
+    "case": "A-d511f9e8",
+    "cat": "wall→real fail ×2",
+    "row": 1
+   },
+   {
+    "case": "A-d9b79b46",
+    "cat": "overturned ×1",
+    "row": 1
+   },
+   {
+    "case": "A-ea80d793",
+    "cat": "same fail ×6",
+    "row": 1
+   }
+  ]
+ },
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 9
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "mark": {
+  "type": "rect",
+  "stroke": "white",
+  "strokeWidth": 2
+ },
+ "encoding": {
+  "x": {
+   "field": "case",
+   "type": "ordinal",
+   "sort": null,
+   "axis": {
+    "title": null,
+    "labelAngle": -90,
+    "labelFontSize": 9,
+    "domain": false,
+    "ticks": false,
+    "labelPadding": 6
+   }
+  },
+  "y": {
+   "field": "row",
+   "type": "ordinal",
+   "axis": null
+  },
+  "color": {
+   "field": "cat",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "same pass ×14",
+     "same fail ×6",
+     "wall→real fail ×2",
+     "overturned ×1"
+    ],
+    "range": [
+     "#2e9e5b",
+     "#9aa0a6",
+     "#e8902e",
+     "#3b7dd8"
+    ]
+   },
+   "legend": {
+    "title": null,
+    "orient": "bottom",
+    "columns": 4,
+    "columnPadding": 18,
+    "symbolSize": 160,
+    "offset": 14
+   }
+  }
+ }
+}
