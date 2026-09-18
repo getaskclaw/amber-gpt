@@ -1,0 +1,189 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "white",
+ "title": {
+  "text": "astra 五档天梯（W36，/21 案）：medium/high 甜点，顶档反噬",
+  "fontSize": 16,
+  "anchor": "start",
+  "subtitle": "xhigh/max 塌方画像雷同：文本纪律崩 + 审查回退负分 + UI 零交付；high 档 token 仅为顶档 2/3",
+  "subtitleFontSize": 11,
+  "subtitleColor": "#777",
+  "subtitlePadding": 6
+ },
+ "width": 460,
+ "height": 300,
+ "config": {
+  "font": "Noto Sans CJK SC",
+  "axis": {
+   "labelFontSize": 12,
+   "titleFontSize": 13
+  },
+  "legend": {
+   "labelFontSize": 12
+  },
+  "view": {
+   "stroke": null
+  }
+ },
+ "layer": [
+  {
+   "data": {
+    "values": [
+     {
+      "band": "low",
+      "seg": "实得",
+      "v": 12,
+      "ord": 1
+     },
+     {
+      "band": "medium",
+      "seg": "实得",
+      "v": 14,
+      "ord": 1
+     },
+     {
+      "band": "high",
+      "seg": "实得",
+      "v": 14,
+      "ord": 1
+     },
+     {
+      "band": "xhigh",
+      "seg": "实得",
+      "v": 10,
+      "ord": 1
+     },
+     {
+      "band": "max",
+      "seg": "实得",
+      "v": 10,
+      "ord": 1
+     }
+    ]
+   },
+   "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "low",
+       "medium",
+       "high",
+       "xhigh",
+       "max"
+      ]
+     },
+     "axis": {
+      "title": null,
+      "labelFontSize": 12
+     }
+    },
+    "y": {
+     "field": "v",
+     "type": "quantitative",
+     "aggregate": "sum",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     },
+     "axis": {
+      "title": "通过案数（/ 21）"
+     }
+    },
+    "color": {
+     "field": "seg",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "实得",
+       "混杂"
+      ],
+      "range": [
+       "#5b8fc9",
+       "#e8a0a0"
+      ]
+     },
+     "legend": null
+    },
+    "order": {
+     "field": "ord",
+     "type": "quantitative"
+    }
+   }
+  },
+  {
+   "data": {
+    "values": [
+     {
+      "band": "low",
+      "total": 12,
+      "label": "12"
+     },
+     {
+      "band": "medium",
+      "total": 14,
+      "label": "14"
+     },
+     {
+      "band": "high",
+      "total": 14,
+      "label": "14"
+     },
+     {
+      "band": "xhigh",
+      "total": 10,
+      "label": "10"
+     },
+     {
+      "band": "max",
+      "total": 10,
+      "label": "10"
+     }
+    ]
+   },
+   "mark": {
+    "type": "text",
+    "dy": -8,
+    "fontSize": 13,
+    "fontWeight": "bold",
+    "color": "#333"
+   },
+   "encoding": {
+    "x": {
+     "field": "band",
+     "type": "ordinal",
+     "scale": {
+      "domain": [
+       "low",
+       "medium",
+       "high",
+       "xhigh",
+       "max"
+      ]
+     }
+    },
+    "y": {
+     "field": "total",
+     "type": "quantitative",
+     "scale": {
+      "domain": [
+       0,
+       21
+      ]
+     }
+    },
+    "text": {
+     "field": "label"
+    }
+   }
+  }
+ ]
+}
