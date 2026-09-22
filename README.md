@@ -28,6 +28,8 @@ English: [README.en.md](README.en.md)
 ## 图说数据
 
 - **本期成绩单**（2026-W37，23 案全库）：luna 三档同一张 15/23，sol 两档 14/23（high 档 09-16 重测平反 UI 案 → **15/23**，见 [W38](results/2026-W38.md)），astra 合成口径 16/23；sol xhigh 中止不进图。
+
+> ⚠️ **三值化预览**（W38 更正特刊草稿 · 未签发 · 本草稿分支仅供审阅）：整数成绩将改写为「确认过 / 确认挂 / 挂起区间」。本仓：改判 12 格、挂起 14 格（挂起格只可能上移，补考前不计任何聚合、不给新名次）。另：假绿双向审计（WO-BRAIN）未开庭，现有 ✓ 格含「假及格」风险，特刊将如实标注。已签裁定含 W36 astra max/xhigh 各 +2 案（8 格叉应改钩）、sol 已改 15/23；luna 系列仍欠重测。
   ![W37 成绩单：分组柱，色 = effort 档](docs/images/scorecard-2026-w37.png)
 - **案面画像**（2026-W37 Full matrix 按 face 聚合）：luna 与 sol 分面通过率几乎重合，唯一差在运维面（A-24bcf707）。注：图为 W37 快照——sol 的 UI 案 09-16 平反，见 [W38](results/2026-W38.md)。
   ![案面画像：luna vs sol 雷达](docs/images/face-profile-2026-w37.png)
