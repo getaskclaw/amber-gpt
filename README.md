@@ -10,7 +10,7 @@ English: [README.en.md](README.en.md)
 - 每周一期 `results/YYYY-Www.md`：同题、同 harness（跑考试并记分的程序），对目标模型跑全库；同模型不同 effort 档（思考力度档位）位并排。
 - 一期固定报告：题集规模与哈希、每案找茬分（d2 分，我们的打分，算法不公开）与通过/失败、终端终态（程序跑完时的退出状态）、token 用量与时延、环境指纹、按证据纪律写的定性裁决。
 - 题目、oracle（判分器）、transcript（答题全过程记录）、中间产物**永不公开**（见下「发布纪律」）。
-- 姐妹仓：[amber-crof](https://github.com/getaskclaw/amber-crof)（CrofAI 周测）、[amber-ollama](https://github.com/getaskclaw/amber-ollama)（Ollama Cloud 周测）、[amber-devin](https://github.com/getaskclaw/amber-devin)（Devin 周测）、[amber-deepseek](https://github.com/getaskclaw/amber-deepseek)（DeepSeek 官方道）、[amber-commandcode](https://github.com/getaskclaw/amber-commandcode)（CommandCode 道）、[amber-opencode](https://github.com/getaskclaw/amber-opencode)（OpenCode Go 道）、[amber-workbuddy](https://github.com/getaskclaw/amber-workbuddy)（WorkBuddy ACP 道）、[amber-doubao](https://github.com/getaskclaw/amber-doubao)、[amber-goldenpotato](https://github.com/getaskclaw/amber-goldenpotato)、[amber-kimi](https://github.com/getaskclaw/amber-kimi)、[amber-stepfun](https://github.com/getaskclaw/amber-stepfun)。
+- 姐妹仓：[amber-crof](https://github.com/getaskclaw/amber-crof)（CrofAI 周测）、[amber-ollama](https://github.com/getaskclaw/amber-ollama)（Ollama Cloud 周测）、[amber-devin](https://github.com/getaskclaw/amber-devin)（Devin 周测）、[amber-deepseek](https://github.com/getaskclaw/amber-deepseek)（DeepSeek 官方道）、[amber-commandcode](https://github.com/getaskclaw/amber-commandcode)（CommandCode 道）、[amber-opencode](https://github.com/getaskclaw/amber-opencode)（OpenCode Go 道）、[amber-workbuddy](https://github.com/getaskclaw/amber-workbuddy)（WorkBuddy ACP 道）、[amber-doubao](https://github.com/getaskclaw/amber-doubao)、[amber-goldenpotato](https://github.com/getaskclaw/amber-goldenpotato)、[amber-kimi](https://github.com/getaskclaw/amber-kimi)、[amber-stepfun](https://github.com/getaskclaw/amber-stepfun)、[amber-claude](https://github.com/getaskclaw/amber-claude)（Claude 道，本期跨仓榜首 opus-5.5 出处）。
 - AMBER 是 agentic 实战题库（施工/运维/审查/视觉/需求漂移——题中要求中途变化），规范与制题工具见 [getaskclaw/amber](https://github.com/getaskclaw/amber)；考题本体私有。
 
 ## 发布纪律（红线）
@@ -27,7 +27,7 @@ English: [README.en.md](README.en.md)
 
 ## 图说数据
 
-- **本期成绩单**（2026-W39，24 案全库）：6 系首发日次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5 17/24，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
+- **本期成绩单**（2026-W39，24 案全库）：6 系发布次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5 17/24，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
   ![W39 榜单构成](results/assets/2026-W39-composition.zh.png)
 - **逐轴对拍**（2026-W39）：6 系三兄弟同日 + 5.6 前辈并排——收益在「判官」面（找茬/归因/审查这类挑别人毛病的轴）：归因 0.47→0.93、审查 0.22→0.64（对照 5.6 前辈，0=全错、1=满分）；视觉轴仍是祖传短板（视觉案打分 sol 1.0 / luna −2，≥2 才算过线，两家都没过）。
   ![W39 逐轴完成度对拍](results/assets/2026-W39-axes.zh.png)
