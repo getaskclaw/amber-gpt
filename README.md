@@ -29,8 +29,8 @@ English: [README.en.md](README.en.md)
 
 - **本期成绩单**（2026-W39，24 案全库）：6 系首发日次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5 17/24，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
   ![W39 榜单构成](results/assets/2026-W39-composition.zh.png)
-- **十轴画像**（2026-W39）：6 系的收益在「判官」面（找茬/归因/审查这类挑别人毛病的轴）——归因 0.47→0.93、审查 0.22→0.64（对照 5.6 前辈，0=全错、1=满分）；视觉轴仍是祖传短板（视觉案打分 sol 1.0 / luna −2，≥2 才算过线，两家都没过）。
-  ![W39 十轴画像](results/assets/2026-W39-radar.zh.png)
+- **逐轴对拍**（2026-W39）：6 系三兄弟同日 + 5.6 前辈并排——收益在「判官」面（找茬/归因/审查这类挑别人毛病的轴）：归因 0.47→0.93、审查 0.22→0.64（对照 5.6 前辈，0=全错、1=满分）；视觉轴仍是祖传短板（视觉案打分 sol 1.0 / luna −2，≥2 才算过线，两家都没过）。
+  ![W39 逐轴完成度对拍](results/assets/2026-W39-axes.zh.png)
 - **本期成绩单**（2026-W37，23 案全库）：luna 三档同一张 15/23，sol 两档 14/23（high 档 09-16 重测平反 UI 案 → **15/23**，见 [W38](results/2026-W38.md)），astra 合成口径 16/23；sol xhigh 中止不进图。
   ![W37 成绩单：分组柱，色 = effort 档](docs/images/scorecard-2026-w37.png)
 - **案面画像**（2026-W37 Full matrix 按 face 聚合）：luna 与 sol 分面通过率几乎重合，唯一差在运维面（A-24bcf707）。注：图为 W37 快照——sol 的 UI 案 09-16 平反，见 [W38](results/2026-W38.md)。

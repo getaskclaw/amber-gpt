@@ -29,8 +29,8 @@ The same model on the same provider can score differently across runs — servin
 
 - **Report card** (2026-W39, 24-case library): first full run the day after the 6-series launch — gpt-6-sol-900k **17/24**, gpt-6-astra-900k **16/24** (same-day control), gpt-6-luna-900k **15/24**; sol ties the cross-repo leader (opus-5.5 17/24, see [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39.md)), and the 5.6-era family pattern "luna ≥ sol" flips in the 6 series. See [W39](results/2026-W39.en.md).
   ![W39 board composition](results/assets/2026-W39-composition.en.png)
-- **Ten-axis profile** (2026-W39): the 6-series gains are on the judge faces (defect-hunt / attribution / review — axes about finding faults in others' work) — attribution 0.47→0.93, review 0.22→0.64 (vs the 5.6 predecessor; 0 = all wrong, 1 = perfect); vision remains the heirloom weakness (vision case score sol 1.0 / luna −2; ≥ 2 passes, neither does).
-  ![W39 ten-axis profile](results/assets/2026-W39-radar.en.png)
+- **Per-axis head-to-head** (2026-W39): the three 6-series siblings same-day plus the 5.6 predecessor side by side — gains on the judge faces (defect-hunt / attribution / review — axes about finding faults in others' work): attribution 0.47→0.93, review 0.22→0.64 (vs the 5.6 predecessor; 0 = all wrong, 1 = perfect); vision remains the heirloom weakness (vision case score sol 1.0 / luna −2; ≥ 2 passes, neither does).
+  ![W39 per-axis completion](results/assets/2026-W39-axes.en.png)
 - **Report card** (2026-W37, 23-case library): luna posts the same 15/23 at all three bands, sol 14/23 at two (high band **corrected to 15/23** on the 09-16 re-test — the ui-build zero-delivery was a client-side watchdog kill, makeup 12/12; see [W38](results/2026-W38.md)), astra 16/23 on a blended tally; sol xhigh aborted and excluded.
   ![W37 report card: grouped bars, color = effort band](docs/images/scorecard-2026-w37.en.png)
 - **Face profile** (W37 full matrix, grouped by face): luna and sol nearly overlap; the only gap is ops (A-24bcf707). Note: W37 snapshot — sol's ui-build cell was overturned on 09-16, see [W38](results/2026-W38.md).
