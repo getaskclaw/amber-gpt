@@ -1,0 +1,248 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "#FAFEFE",
+ "width": 640,
+ "height": 300,
+ "title": {
+  "text": "Per-axis completion: 6-series vs 5.6 predecessor (same high band)",
+  "subtitle": "gray bar absent at Convergence = case admitted after W38, not a zero",
+  "fontSize": 15,
+  "subtitleFontSize": 11
+ },
+ "data": {
+  "values": [
+   {
+    "axis": "Coding",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "Coding",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "Coding",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "Delivery",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "Delivery",
+    "lane": "gpt-6-luna-900k",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "Delivery",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "Ops",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.833,
+    "order": 2
+   },
+   {
+    "axis": "Ops",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.833,
+    "order": 2
+   },
+   {
+    "axis": "Ops",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.933,
+    "order": 2
+   },
+   {
+    "axis": "Requirements",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 3
+   },
+   {
+    "axis": "Requirements",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.75,
+    "order": 3
+   },
+   {
+    "axis": "Requirements",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 3
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 4
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.917,
+    "order": 4
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 4
+   },
+   {
+    "axis": "Vision",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.556,
+    "order": 5
+   },
+   {
+    "axis": "Vision",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.222,
+    "order": 5
+   },
+   {
+    "axis": "Vision",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.222,
+    "order": 5
+   },
+   {
+    "axis": "Defense",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.389,
+    "order": 6
+   },
+   {
+    "axis": "Defense",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.222,
+    "order": 6
+   },
+   {
+    "axis": "Defense",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.347,
+    "order": 6
+   },
+   {
+    "axis": "Attribution",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.933,
+    "order": 7
+   },
+   {
+    "axis": "Attribution",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.467,
+    "order": 7
+   },
+   {
+    "axis": "Attribution",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.467,
+    "order": 7
+   },
+   {
+    "axis": "Review",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.639,
+    "order": 8
+   },
+   {
+    "axis": "Review",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.611,
+    "order": 8
+   },
+   {
+    "axis": "Review",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.222,
+    "order": 8
+   },
+   {
+    "axis": "Convergence",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 9
+   },
+   {
+    "axis": "Convergence",
+    "lane": "gpt-6-luna-900k",
+    "v": 1.0,
+    "order": 9
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar"
+ },
+ "encoding": {
+  "x": {
+   "field": "axis",
+   "type": "nominal",
+   "sort": {
+    "field": "order"
+   },
+   "axis": {
+    "title": null,
+    "labelAngle": -30,
+    "labelFontSize": 12
+   }
+  },
+  "y": {
+   "field": "v",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     1
+    ]
+   },
+   "axis": {
+    "title": "completion",
+    "format": ".0%"
+   }
+  },
+  "xOffset": {
+   "field": "lane"
+  },
+  "color": {
+   "field": "lane",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "gpt-6-sol-900k",
+     "gpt-6-luna-900k",
+     "gpt-5.6-sol-900k (W38)"
+    ],
+    "range": [
+     "#00838F",
+     "#E67E22",
+     "#9AA5B1"
+    ]
+   },
+   "legend": {
+    "title": null,
+    "orient": "bottom",
+    "labelLimit": 0
+   }
+  }
+ },
+ "config": {
+  "font": "Noto Sans CJK SC"
+ }
+}

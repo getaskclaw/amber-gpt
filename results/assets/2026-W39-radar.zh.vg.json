@@ -1,0 +1,423 @@
+{
+ "$schema": "https://vega.github.io/schema/vega/v5.json",
+ "width": 560,
+ "height": 560,
+ "padding": 90,
+ "background": "#FAFEFE",
+ "title": {
+  "text": "GPT-6 Sol / Luna 十轴画像（AMBER W39 全库首考）",
+  "fontSize": 16,
+  "offset": 14,
+  "anchor": "middle"
+ },
+ "signals": [
+  {
+   "name": "radius",
+   "update": "width / 2"
+  }
+ ],
+ "data": [
+  {
+   "name": "table",
+   "values": [
+    {
+     "key": "编码",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.958
+    },
+    {
+     "key": "交付",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 1.0
+    },
+    {
+     "key": "运维",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.833
+    },
+    {
+     "key": "需求",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 1.0
+    },
+    {
+     "key": "UI",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 1.0
+    },
+    {
+     "key": "视觉",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.556
+    },
+    {
+     "key": "防御",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.389
+    },
+    {
+     "key": "归因",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.933
+    },
+    {
+     "key": "审查",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 0.639
+    },
+    {
+     "key": "收敛",
+     "category": "gpt-6-sol-900k (17/24)",
+     "value": 1.0
+    },
+    {
+     "key": "编码",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.958
+    },
+    {
+     "key": "交付",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 1.0
+    },
+    {
+     "key": "运维",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.833
+    },
+    {
+     "key": "需求",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.75
+    },
+    {
+     "key": "UI",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.917
+    },
+    {
+     "key": "视觉",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.222
+    },
+    {
+     "key": "防御",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.222
+    },
+    {
+     "key": "归因",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.467
+    },
+    {
+     "key": "审查",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 0.611
+    },
+    {
+     "key": "收敛",
+     "category": "gpt-6-luna-900k (15/24)",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "name": "keys",
+   "values": [
+    "编码",
+    "交付",
+    "运维",
+    "需求",
+    "UI",
+    "视觉",
+    "防御",
+    "归因",
+    "审查",
+    "收敛"
+   ]
+  },
+  {
+   "name": "category_labels",
+   "values": [
+    {
+     "category": "gpt-6-sol-900k",
+     "label": "gpt-6-sol-900k (17/24)"
+    },
+    {
+     "category": "gpt-6-luna-900k",
+     "label": "gpt-6-luna-900k (15/24)"
+    }
+   ]
+  }
+ ],
+ "scales": [
+  {
+   "name": "angular",
+   "type": "point",
+   "range": {
+    "signal": "[-PI, PI]"
+   },
+   "padding": 0.5,
+   "domain": {
+    "data": "table",
+    "field": "key"
+   }
+  },
+  {
+   "name": "radial",
+   "type": "linear",
+   "range": {
+    "signal": "[0, radius]"
+   },
+   "zero": true,
+   "nice": false,
+   "domain": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "color",
+   "type": "ordinal",
+   "domain": [
+    "gpt-6-sol-900k (17/24)",
+    "gpt-6-luna-900k (15/24)"
+   ],
+   "range": [
+    "#00838F",
+    "#E67E22"
+   ]
+  }
+ ],
+ "legends": [
+  {
+   "fill": "color",
+   "orient": "bottom",
+   "direction": "horizontal",
+   "title": null,
+   "labelFontSize": 13,
+   "labelLimit": 0,
+   "offset": 24
+  }
+ ],
+ "encode": {
+  "enter": {
+   "x": {
+    "signal": "radius"
+   },
+   "y": {
+    "signal": "radius"
+   }
+  }
+ },
+ "marks": [
+  {
+   "type": "group",
+   "name": "categories",
+   "zindex": 1,
+   "from": {
+    "facet": {
+     "data": "table",
+     "name": "facet",
+     "groupby": "category"
+    }
+   },
+   "marks": [
+    {
+     "type": "line",
+     "name": "category-line",
+     "from": {
+      "data": "facet"
+     },
+     "encode": {
+      "enter": {
+       "interpolate": {
+        "value": "linear-closed"
+       },
+       "x": {
+        "signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"
+       },
+       "y": {
+        "signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"
+       },
+       "stroke": {
+        "scale": "color",
+        "field": "category"
+       },
+       "strokeWidth": {
+        "value": 2
+       },
+       "fill": {
+        "scale": "color",
+        "field": "category"
+       },
+       "fillOpacity": {
+        "value": 0.12
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "type": "rule",
+   "name": "radial-grid",
+   "from": {
+    "data": "keys"
+   },
+   "zindex": 0,
+   "encode": {
+    "enter": {
+     "x": {
+      "value": 0
+     },
+     "y": {
+      "value": 0
+     },
+     "x2": {
+      "signal": "radius * cos(scale('angular', datum.data))"
+     },
+     "y2": {
+      "signal": "radius * sin(scale('angular', datum.data))"
+     },
+     "stroke": {
+      "value": "#D5DBDB"
+     },
+     "strokeWidth": {
+      "value": 1
+     }
+    }
+   }
+  },
+  {
+   "type": "text",
+   "name": "key-label",
+   "from": {
+    "data": "keys"
+   },
+   "zindex": 1,
+   "encode": {
+    "enter": {
+     "x": {
+      "signal": "(radius + 16) * cos(scale('angular', datum.data))"
+     },
+     "y": {
+      "signal": "(radius + 16) * sin(scale('angular', datum.data))"
+     },
+     "text": {
+      "signal": "datum.data"
+     },
+     "align": {
+      "signal": "abs(scale('angular', datum.data)) > PI/2 - 0.3 && abs(scale('angular', datum.data)) < PI/2 + 0.3 ? 'center' : (cos(scale('angular', datum.data)) > 0 ? 'left' : 'right')"
+     },
+     "baseline": {
+      "value": "middle"
+     },
+     "fontSize": {
+      "value": 13
+     },
+     "fontWeight": {
+      "value": "bold"
+     },
+     "fill": {
+      "value": "#37474F"
+     }
+    }
+   }
+  },
+  {
+   "type": "line",
+   "name": "outer-line",
+   "from": {
+    "data": "keys"
+   },
+   "encode": {
+    "enter": {
+     "interpolate": {
+      "value": "linear-closed"
+     },
+     "x": {
+      "signal": "scale('radial', 1) * cos(scale('angular', datum.data))"
+     },
+     "y": {
+      "signal": "scale('radial', 1) * sin(scale('angular', datum.data))"
+     },
+     "stroke": {
+      "value": "#B0BEC5"
+     },
+     "strokeWidth": {
+      "value": 1
+     }
+    }
+   }
+  },
+  {
+   "type": "line",
+   "name": "inner-line",
+   "from": {
+    "data": "keys"
+   },
+   "encode": {
+    "enter": {
+     "interpolate": {
+      "value": "linear-closed"
+     },
+     "x": {
+      "signal": "scale('radial', 0.5) * cos(scale('angular', datum.data))"
+     },
+     "y": {
+      "signal": "scale('radial', 0.5) * sin(scale('angular', datum.data))"
+     },
+     "stroke": {
+      "value": "#ECEFF1"
+     },
+     "strokeWidth": {
+      "value": 1
+     },
+     "strokeDash": {
+      "value": [
+       4,
+       4
+      ]
+     }
+    }
+   }
+  },
+  {
+   "type": "line",
+   "name": "mid-line",
+   "from": {
+    "data": "keys"
+   },
+   "encode": {
+    "enter": {
+     "interpolate": {
+      "value": "linear-closed"
+     },
+     "x": {
+      "signal": "scale('radial', 0.75) * cos(scale('angular', datum.data))"
+     },
+     "y": {
+      "signal": "scale('radial', 0.75) * sin(scale('angular', datum.data))"
+     },
+     "stroke": {
+      "value": "#ECEFF1"
+     },
+     "strokeWidth": {
+      "value": 1
+     },
+     "strokeDash": {
+      "value": [
+       2,
+       2
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "config": {
+  "font": "Noto Sans CJK SC"
+ }
+}

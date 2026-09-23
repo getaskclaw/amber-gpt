@@ -1,0 +1,117 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "#FAFEFE",
+ "width": 560,
+ "height": 120,
+ "title": {
+  "text": "2026-W39 board composition: 24 cases pass/fail",
+  "fontSize": 15
+ },
+ "data": {
+  "values": [
+   {
+    "lane": "gpt-6-sol-900k",
+    "seg": "pass",
+    "n": 17,
+    "mid": 8.5
+   },
+   {
+    "lane": "gpt-6-sol-900k",
+    "seg": "fail",
+    "n": 7,
+    "mid": 20.5
+   },
+   {
+    "lane": "gpt-6-luna-900k",
+    "seg": "pass",
+    "n": 15,
+    "mid": 7.5
+   },
+   {
+    "lane": "gpt-6-luna-900k",
+    "seg": "fail",
+    "n": 9,
+    "mid": 19.5
+   }
+  ]
+ },
+ "layer": [
+  {
+   "mark": {
+    "type": "bar",
+    "height": 26
+   },
+   "encoding": {
+    "y": {
+     "field": "lane",
+     "type": "nominal",
+     "axis": {
+      "title": null,
+      "labelFontSize": 12,
+      "labelFont": "Noto Sans CJK SC"
+     }
+    },
+    "x": {
+     "field": "n",
+     "type": "quantitative",
+     "axis": {
+      "title": "cases",
+      "tickMinStep": 2
+     },
+     "scale": {
+      "domain": [
+       0,
+       24.8
+      ]
+     }
+    },
+    "color": {
+     "field": "seg",
+     "type": "nominal",
+     "scale": {
+      "domain": [
+       "pass",
+       "fail"
+      ],
+      "range": [
+       "#00838F",
+       "#C0392B"
+      ]
+     },
+     "legend": {
+      "title": null,
+      "orient": "bottom"
+     }
+    },
+    "order": {
+     "field": "seg",
+     "sort": "ascending"
+    }
+   }
+  },
+  {
+   "mark": {
+    "type": "text",
+    "color": "#fff",
+    "fontSize": 13,
+    "fontWeight": "bold"
+   },
+   "encoding": {
+    "y": {
+     "field": "lane",
+     "type": "nominal"
+    },
+    "x": {
+     "field": "mid",
+     "type": "quantitative"
+    },
+    "text": {
+     "field": "n"
+    }
+   }
+  }
+ ],
+ "config": {
+  "font": "Noto Sans CJK SC"
+ }
+}

@@ -1,0 +1,248 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "background": "#FAFEFE",
+ "width": 640,
+ "height": 300,
+ "title": {
+  "text": "逐轴完成度：6 系 vs 5.6 前辈（同 high 档）",
+  "subtitle": "灰柱收敛轴空缺 = 该案 W38 发榜后才入册，非零分",
+  "fontSize": 15,
+  "subtitleFontSize": 11
+ },
+ "data": {
+  "values": [
+   {
+    "axis": "编码",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "编码",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "编码",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.958,
+    "order": 0
+   },
+   {
+    "axis": "交付",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "交付",
+    "lane": "gpt-6-luna-900k",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "交付",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 1
+   },
+   {
+    "axis": "运维",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.833,
+    "order": 2
+   },
+   {
+    "axis": "运维",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.833,
+    "order": 2
+   },
+   {
+    "axis": "运维",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.933,
+    "order": 2
+   },
+   {
+    "axis": "需求",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 3
+   },
+   {
+    "axis": "需求",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.75,
+    "order": 3
+   },
+   {
+    "axis": "需求",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 3
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 4
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.917,
+    "order": 4
+   },
+   {
+    "axis": "UI",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 1.0,
+    "order": 4
+   },
+   {
+    "axis": "视觉",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.556,
+    "order": 5
+   },
+   {
+    "axis": "视觉",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.222,
+    "order": 5
+   },
+   {
+    "axis": "视觉",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.222,
+    "order": 5
+   },
+   {
+    "axis": "防御",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.389,
+    "order": 6
+   },
+   {
+    "axis": "防御",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.222,
+    "order": 6
+   },
+   {
+    "axis": "防御",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.347,
+    "order": 6
+   },
+   {
+    "axis": "归因",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.933,
+    "order": 7
+   },
+   {
+    "axis": "归因",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.467,
+    "order": 7
+   },
+   {
+    "axis": "归因",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.467,
+    "order": 7
+   },
+   {
+    "axis": "审查",
+    "lane": "gpt-6-sol-900k",
+    "v": 0.639,
+    "order": 8
+   },
+   {
+    "axis": "审查",
+    "lane": "gpt-6-luna-900k",
+    "v": 0.611,
+    "order": 8
+   },
+   {
+    "axis": "审查",
+    "lane": "gpt-5.6-sol-900k (W38)",
+    "v": 0.222,
+    "order": 8
+   },
+   {
+    "axis": "收敛",
+    "lane": "gpt-6-sol-900k",
+    "v": 1.0,
+    "order": 9
+   },
+   {
+    "axis": "收敛",
+    "lane": "gpt-6-luna-900k",
+    "v": 1.0,
+    "order": 9
+   }
+  ]
+ },
+ "mark": {
+  "type": "bar"
+ },
+ "encoding": {
+  "x": {
+   "field": "axis",
+   "type": "nominal",
+   "sort": {
+    "field": "order"
+   },
+   "axis": {
+    "title": null,
+    "labelAngle": -30,
+    "labelFontSize": 12
+   }
+  },
+  "y": {
+   "field": "v",
+   "type": "quantitative",
+   "scale": {
+    "domain": [
+     0,
+     1
+    ]
+   },
+   "axis": {
+    "title": "完成度",
+    "format": ".0%"
+   }
+  },
+  "xOffset": {
+   "field": "lane"
+  },
+  "color": {
+   "field": "lane",
+   "type": "nominal",
+   "scale": {
+    "domain": [
+     "gpt-6-sol-900k",
+     "gpt-6-luna-900k",
+     "gpt-5.6-sol-900k (W38)"
+    ],
+    "range": [
+     "#00838F",
+     "#E67E22",
+     "#9AA5B1"
+    ]
+   },
+   "legend": {
+    "title": null,
+    "orient": "bottom",
+    "labelLimit": 0
+   }
+  }
+ },
+ "config": {
+  "font": "Noto Sans CJK SC"
+ }
+}
