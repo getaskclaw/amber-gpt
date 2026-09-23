@@ -2,7 +2,7 @@
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  "background": "#FAFEFE",
  "width": 560,
- "height": 120,
+ "height": 160,
  "title": {
   "text": "2026-W39 榜单构成：24 案胜/负",
   "fontSize": 15
@@ -20,6 +20,18 @@
     "seg": "负",
     "n": 7,
     "mid": 20.5
+   },
+   {
+    "lane": "gpt-6-astra-900k",
+    "seg": "胜",
+    "n": 16,
+    "mid": 8.0
+   },
+   {
+    "lane": "gpt-6-astra-900k",
+    "seg": "负",
+    "n": 8,
+    "mid": 20.0
    },
    {
     "lane": "gpt-6-luna-900k",
