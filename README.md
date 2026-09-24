@@ -1,5 +1,7 @@
 # amber-gpt
 
+> 5.6-luna 展示更正：W37 high 基线加 W39 同档补测；16'/24 = 16 胜 · 4 负 · 4 挂起。首次公开三案 exonerated_infra 改判、能力分暂停采用；A-ea80d793 维持挂起。见 [更正](results/2026-W38-correction-luna-high.md)。GPT-6 成绩不动。 ' = contested（安全拒答挂起）或 invalid（基建相关（考场 harness 或判分环境）的挂起、作废或待重评），均不计胜负；所有含 NA 的道都带撇号，包括冻结展示行；挂起不表示死因已定。
+
 用私有题库 **AMBER** 每周实测 GPT 系模型（含不同推理档位），只公开结果，不公开题目。
 English: [README.en.md](README.en.md)
 
@@ -27,7 +29,7 @@ English: [README.en.md](README.en.md)
 
 ## 图说数据
 
-- **本期成绩单**（2026-W39，24 案全库）：6 系发布次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5 17/24，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
+- **本期成绩单**（2026-W39，24 案全库）：6 系发布次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5：17 胜 · 6 负 · 1 案基建作废，见其更正刊，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39-correction.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
   ![W39 榜单构成](results/assets/2026-W39-composition.zh.png)
 - **逐轴对拍**（2026-W39）：6 系三兄弟同日 + 5.6 前辈并排——收益在「判官」面（找茬/归因/审查这类挑别人毛病的轴）：归因 0.47→0.93、审查 0.22→0.64（对照 5.6 前辈，0=全错、1=满分）；视觉轴仍是祖传短板（视觉案打分 sol 1.0 / luna −2，≥2 才算过线，两家都没过）。
   ![W39 逐轴完成度对拍](results/assets/2026-W39-axes.zh.png)
@@ -48,6 +50,7 @@ English: [README.en.md](README.en.md)
 | [2026-W37](results/2026-W37.md) | gpt-5.6-luna-900k 三档 + gpt-5.6-sol-900k 两档（23 案新库）；astra 裸 base 补考 2 新案（addendum） | luna 三档同分同名单（15/23），effort 零收益，xhigh=2.9x 纯浪费；sol 无一档赢 luna;xhigh 超时墙再现顶档反噬；astra 补考全过→合成 16/23（-900k 变体已被收回，口径混合已标注）。Addendum 3（09-16）：sol 重测平反 UI 案 → 15/23 |
 | [2026-W38](results/2026-W38.md) | gpt-5.6-sol-900k @ high 全库降智复测（对拍 W37） | 零能力回退：22/23 案过挂一致，hard 区分器 7/7 依旧；唯一变化=UI 案平反（客户端看门狗误杀，补考 12/12 满分）→ **15/23**，第四家该案满分车道；luna 同案疑似同冤（未复测）；上游 hermes-agent#112909。Addendum 4（09-17）：luna max 档首考 **16/23** 档梯最满——但 +1 案（UI 案 12/12 首交付）与 09-16 看门狗修复同日混杂，剔除后实为 15/23 与 high 打平，「effort 零收益」成立（reasoning 397K ≈ high 2.6 倍）；视觉案 5.0 刷已发布历史最高；归因案 14/15→7/15 顶档反噬同型再现 |
 | [2026-W38 更正特刊](results/2026-W38-correction.md) | W38 全库复核:本仓改判 12 格 · 挂起 14 格 | W36 astra max/xhigh 8 格平反(公开旧值应改钩);W37 luna/sol 14 格挂起;W38 Add4 1 格 + sol 复测 3 格平反 |
+| [5.6-luna high 展示更正](results/2026-W38-correction-luna-high.md) | W37 high 基线 2026-09-07 + W39 high 补测 2026-09-21 | 16'/24：16 胜 · 4 负 · 4 挂起；UI／视觉／审查 NA；十轴只用 high，不再混 max |
 | [2026-W39](results/2026-W39.md) | gpt-6-sol-900k + gpt-6-luna-900k @ high 全库首考 + gpt-6-astra-900k 同日对照（24 案，6 系首发次日） | sol **17/24** 追平跨仓榜首 opus-5.5；astra 同日对照 16/24（双跑对零翻转）；luna 15/24；家族规律「luna≥sol」在 6 系翻转；收益在判官面（归因 0.47→0.93、审查 0.22→0.64），视觉轴仍是短板（1.0 / −2 均未过线）；harness 起焊死验脑硬闸 |
 
 ## 免责
