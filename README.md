@@ -29,7 +29,8 @@ English: [README.en.md](README.en.md)
 
 ## 图说数据
 
-- **本期成绩单**（2026-W39，24 案全库）：6 系发布次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5：17 胜 · 6 负 · 1 案基建作废，见其更正刊，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39-correction.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
+- **本期成绩单**（2026-W40，24 案全库）：gpt-6.1-sol 全库首考 **16/24**，零挂起。与前辈 gpt-6-sol-900k（W39，17/24）只有运维案 A-8c909d0a 的胜负不同；两场的窗口也不同（272K 对 900K），并列看，不据此判断强弱。视觉、防御、归因没有过案，审查过 1 案。详见 [W40](results/2026-W40.md)。
+- **成绩单**（2026-W39，24 案全库）：6 系发布次日全库首考——gpt-6-sol-900k **17/24**、gpt-6-astra-900k **16/24**（同日对照）、gpt-6-luna-900k **15/24**；sol 追平跨仓榜首（opus-5.5：17 胜 · 6 负 · 1 案基建作废，见其更正刊，见 [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39-correction.md)），5.6 时代「luna ≥ sol」的家族规律在 6 系翻转。详见 [W39](results/2026-W39.md)。
   ![W39 榜单构成](results/assets/2026-W39-composition.zh.png)
 - **逐轴对拍**（2026-W39）：6 系三兄弟同日 + 5.6 前辈并排——收益在「判官」面（找茬/归因/审查这类挑别人毛病的轴）：归因 0.47→0.93、审查 0.22→0.64（对照 5.6 前辈，0=全错、1=满分）；视觉轴仍是祖传短板（视觉案打分 sol 1.0 / luna −2，≥2 才算过线，两家都没过）。
   ![W39 逐轴完成度对拍](results/assets/2026-W39-axes.zh.png)
@@ -52,6 +53,7 @@ English: [README.en.md](README.en.md)
 | [2026-W38 更正特刊](results/2026-W38-correction.md) | W38 全库复核:本仓改判 12 格 · 挂起 14 格 | W36 astra max/xhigh 8 格平反(公开旧值应改钩);W37 luna/sol 14 格挂起;W38 Add4 1 格 + sol 复测 3 格平反 |
 | [5.6-luna high 展示更正](results/2026-W38-correction-luna-high.md) | W37 high 基线 2026-09-07 + W39 high 补测 2026-09-21 | 16'/24：16 胜 · 4 负 · 4 挂起；UI／视觉／审查 NA；十轴只用 high，不再混 max |
 | [2026-W39](results/2026-W39.md) | gpt-6-sol-900k + gpt-6-luna-900k @ high 全库首考 + gpt-6-astra-900k 同日对照（24 案，6 系首发次日） | sol **17/24** 追平跨仓榜首 opus-5.5；astra 同日对照 16/24（双跑对零翻转）；luna 15/24；家族规律「luna≥sol」在 6 系翻转；收益在判官面（归因 0.47→0.93、审查 0.22→0.64），视觉轴仍是短板（1.0 / −2 均未过线）；harness 起焊死验脑硬闸 |
+| [2026-W40](results/2026-W40.md) | gpt-6.1-sol @ high 全库首考（24 案，2026-10-02） | **16/24**，零挂起；与 gpt-6-sol-900k（W39，17/24）只有运维案 A-8c909d0a 的胜负不同，窗口 272K 对 900K，并列看，不据此判断强弱；视觉、防御、归因没有过案，审查过 1 案；镜像 v2 加 PyYAML，品牌题单题关考卷闸 |
 
 ## 免责
 
