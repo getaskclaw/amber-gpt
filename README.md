@@ -29,10 +29,6 @@ English: [README.en.md](README.en.md)
 
 <!-- scoreboard:end -->
 
-## 怎么读成绩
-
-![一份 AMBER 成绩单怎么读：每案过、没过或 NA，总分 = 过的案数 / 24，有 NA 加撇号；例 gpt-6.1-sol 16 过 + 7 没过 + 1 NA = 16'/24](results/assets/how-to-read-a-score.zh.png?v=20261003)
-
 ## 这是什么
 
 - 「道」= 同一个模型名在不同家的卖场/接口；「案」= 一道题，「卷」= 一场考试记录（一案多卷 = 一道题的几个变体场次）。

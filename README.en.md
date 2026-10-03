@@ -29,10 +29,6 @@ Each cell = cases passed / cases on that axis. NA = a void or held case; it coun
 
 <!-- scoreboard:end -->
 
-## How to read a score
-
-![How to read an AMBER score: each case is a pass, a fail or NA; the total is cases passed / 24, with a prime when any case is NA; example gpt-6.1-sol 16 pass + 7 fail + 1 NA = 16'/24](results/assets/how-to-read-a-score.en.png?v=20261003)
-
 ## What this is
 
 - A 'lane' is one vendor's shop/API for a model name; a 'case' is one task, a 'run' is one sitting (a multi-variant case has several runs).
