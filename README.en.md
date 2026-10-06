@@ -11,19 +11,19 @@ Weekly public benchmark results of GPT-family models (across reasoning-effort ba
 
 <!-- scoreboard:start -->
 
-| Group | Axis | What it tests | gpt-6.1-sol · [W40](results/2026-W40.en.md) | gpt-6-sol-900k · [W39](results/2026-W39.en.md) | gpt-6-astra-900k · [W39](results/2026-W39.en.md) | gpt-6-luna-900k · [W39](results/2026-W39.en.md) | gpt-5.6-sol-900k (high band) · [W38](results/2026-W38.md) | gpt-5.6-luna-900k (high band) · [W37](results/2026-W37.md) |
-|---|---|---|:-:|:-:|:-:|:-:|:-:|:-:|
-| Building | Coding | Implement the spec correctly | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 |
-|  | Delivery | Done means handed in | 3/3 | 3/3 | 2/3 | 3/3 | 3/3 | 3/3 |
-|  | Ops | Follow the runbook | 4/6 | 5/6 | 5/6 | 5/6 | 5/6 | 6/6 |
-|  | Requirements | Ship A when A was asked | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 |
-|  | Convergence | Finish, don't spin | 1/1 | 1/1 | 1/1 | 1/1 | — | 1/1 |
-| Judging | UI | Build the page to the mock | 1/1 | 1/1 | 0/1 | 0/1 | 1/1 | 0/1 · 1 NA |
-|  | Vision | Spot defects in screenshots | 0/1 | 0/1 | 1/1 | 0/1 | 0/1 · 1 NA | 0/1 · 1 NA |
-|  | Defense | Plug every hole in the validator | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA |
-|  | Attribution | Pin defects to their root cause | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 |
-|  | Review | Inspect someone else's work | 1/2 | 1/2 | 1/2 | 1/2 | 0/2 · 2 NA | 0/2 · 2 NA |
-|  | **Total** |  | **16'/24** | **17'/24** | **16'/24** | **15'/24** | **15'/23** | **16'/24** |
+| Group | Axis | What it tests | gpt-5.6-luna · [W41](results/2026-W41.en.md) | gpt-5.6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6-luna · [W41](results/2026-W41.en.md) | gpt-6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6.1-sol · [W40](results/2026-W40.en.md) | gpt-6-sol-900k · [W39](results/2026-W39.en.md) | gpt-6-astra-900k · [W39](results/2026-W39.en.md) | gpt-5.6-sol-900k (high band) · [W38](results/2026-W38.md) | gpt-5.6-luna-900k (high band) · [W37](results/2026-W37.md) |
+|---|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Building | Coding | Implement the spec correctly | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 |
+|  | Delivery | Done means handed in | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 2/3 | 3/3 | 3/3 |
+|  | Ops | Follow the runbook | 5/6 | 5/6 | 5/6 | 5/6 | 4/6 | 5/6 | 5/6 | 5/6 | 6/6 |
+|  | Requirements | Ship A when A was asked | 1/1 | 0/1 | 0/1 | 0/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 |
+|  | Convergence | Finish, don't spin | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | — | 1/1 |
+| Judging | UI | Build the page to the mock | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 0/1 | 1/1 | 0/1 · 1 NA |
+|  | Vision | Spot defects in screenshots | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 1/1 | 0/1 · 1 NA | 0/1 · 1 NA |
+|  | Defense | Plug every hole in the validator | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA |
+|  | Attribution | Pin defects to their root cause | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 |
+|  | Review | Inspect someone else's work | 1/2 | 1/2 | 1/2 | 1/2 | 1/2 | 1/2 | 1/2 | 0/2 · 2 NA | 0/2 · 2 NA |
+|  | **Total** |  | **17'/24** | **16'/24** | **16'/24** | **15'/24** | **16'/24** | **17'/24** | **16'/24** | **15'/23** | **16'/24** |
 
 Each cell = cases passed / cases on that axis (a case is one scored task). NA = the case was voided or put on hold; it counts as neither a pass nor a fail, and a total carrying `'` contains at least one NA. Most axes hold only 1–2 cases, so one case moves the reading: do not over-read small gaps. Sittings are from different weeks; every number is a snapshot.
 
@@ -53,6 +53,8 @@ The same model on the same provider can score differently across runs — servin
 
 ## Charts
 
+- **Report card** (2026-W41, 24-case library): four luna models took the full library one after another in the same isolated room (2026-10-06, high band, serial) — gpt-5.6-luna **17'/24**, gpt-5.6-luna-900k **16'/24**, gpt-6-luna **16'/24**, gpt-6-luna-900k **15'/24** (the second sitting of that lane, now its headline); the only NA in each is A-d511f9e8. Of the 24 cases, 20 have the same win or loss on all four; no passes on vision, defense or attribution on any of them; gpt-6-luna-900k is missing one required file on the UI case, counted as a loss. Neighbouring totals are one case apart, each taken once, so this does not show who is stronger or weaker. See [W41](results/2026-W41.en.md).
+  ![W41 case by case: four luna sittings](results/assets/2026-W41-strip.en.png?v=20261006)
 - **Report card** (2026-W40, 24-case library): gpt-6.1-sol, first full-library test, **16'/24** with nothing on hold apart from A-d511f9e8. Only one case has a different win or loss from its predecessor gpt-6-sol-900k (W39, 17'/24): ops case A-8c909d0a. The context windows also differ (272K against 900K), so read the two side by side; this does not show that one is stronger or weaker. No passes on vision, defense or attribution; review passes one case. See [W40](results/2026-W40.en.md).
   ![W40 case by case: gpt-6.1-sol and gpt-6-sol-900k (W39)](results/assets/2026-W40-strip.en.png?v=20261002b)
 - **Report card** (2026-W39, 24-case library): first full run the day after the 6-series launch — gpt-6-sol-900k **17/24**, gpt-6-astra-900k **16/24** (same-day control), gpt-6-luna-900k **15/24**; sol ties the cross-repo leader (opus-5.5: 17 wins · 6 losses · 1 case void due to infrastructure; see its correction, see [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39-correction.en.md)), and the 5.6-era family pattern "luna ≥ sol" flips in the 6 series. See [W39](results/2026-W39.en.md).
@@ -79,6 +81,7 @@ The same model on the same provider can score differently across runs — servin
 | [5.6-luna high display correction](results/2026-W38-correction-luna-high.en.md) | W37 high base 2026-09-07 + W39 high make-up 2026-09-21 | 16'/24: 16 wins · 4 losses · 4 held; UI / Vision / Review NA; high only, not max |
 | [2026-W39](results/2026-W39.en.md) | gpt-6-sol-900k + gpt-6-luna-900k @ high first full run + gpt-6-astra-900k same-day control (24 cases, day after the 6-series launch) | sol **17/24** ties the cross-repo leader opus-5.5; astra same-day control 16/24 (double-run pair, zero flips); luna 15/24; the "luna ≥ sol" family pattern flips in the 6 series; gains on the judge faces (attribution 0.47→0.93, review 0.22→0.64), vision still the weakness (1.0 / −2, both below the line); harness now hard-fails on brain mismatch |
 | [2026-W40](results/2026-W40.en.md) | gpt-6.1-sol @ high first full run (24 cases, 2026-10-02) | **16'/24** with nothing on hold apart from A-d511f9e8; only ops case A-8c909d0a has a different win or loss from gpt-6-sol-900k (W39, 17'/24), and the windows differ (272K against 900K), so read them side by side, not as stronger or weaker; no passes on vision, defense or attribution, review passes one case; image v2 adds PyYAML, and the paper gate is off for the brand case only |
+| [2026-W41](results/2026-W41.en.md) | gpt-5.6-luna, gpt-5.6-luna-900k, gpt-6-luna, gpt-6-luna-900k @ high full run (24 cases, 2026-10-06, isolated room, serial) | **17'/24, 16'/24, 16'/24, 15'/24**, the only NA in each is A-d511f9e8; the first three are new lanes, gpt-6-luna-900k is the second sitting of an existing lane (first: W39, different room, not compared cell by cell); of the 24 cases 20 have the same win or loss on all four, no passes on vision, defense or attribution; gpt-6-luna-900k is missing one required file on the UI case; the scoreboard also has an older row `gpt-5.6-luna-900k (high 档)` (the W37 baseline), which is not the same lane as the new one in this issue; neighbouring totals are one case apart, each taken once, so no ranking of strength |
 
 ## Disclaimer
 
