@@ -4,6 +4,8 @@
 
 > Correction for 5.6-luna: W37 high base plus W39 high make-up; 16'/24 = 16 wins · 4 losses · 4 held. First public announcement of three exonerated_infra rulings, capability scores withheld; A-ea80d793 stays held. [Details](results/2026-W38-correction-luna-high.en.md). This does not change GPT-6 results. ' = contested (held for safety refusal) or invalid (infrastructure-related (test harness or scoring environment) cases: held, void or awaiting re-scoring); neither counts as a win or a loss. Every lane with NA carries an apostrophe, including frozen display rows; a hold does not settle the cause.
 
+> **Update 2026-10-07**: the Charts entry for the W39 per-axis head-to-head below says "≥ 2 passes" for the vision case. That is an imprecise shorthand: the vision case is not decided by the fault-finding score alone, and the same score of 2 can pass in one sitting and fail in another. The old sentence is kept as it is; see the 2026-10-07 updates at the top of the [W39](results/2026-W39.en.md) and [W40](results/2026-W40.en.md) pages.
+
 Weekly public benchmark results of GPT-family models (across reasoning-effort band (the thinking-effort setting)s) on the private **AMBER** suite — cases private, results public.
 中文： [README.md](README.md)
 
@@ -58,7 +60,7 @@ The same model on the same provider can score differently across runs — servin
 - **Report card** (2026-W40, 24-case library): gpt-6.1-sol, first full-library test, **16'/24** with nothing on hold apart from A-d511f9e8. Only one case has a different win or loss from its predecessor gpt-6-sol-900k (W39, 17'/24): ops case A-8c909d0a. The context windows also differ (272K against 900K), so read the two side by side; this does not show that one is stronger or weaker. No passes on vision, defense or attribution; review passes one case. See [W40](results/2026-W40.en.md).
   ![W40 case by case: gpt-6.1-sol and gpt-6-sol-900k (W39)](results/assets/2026-W40-strip.en.png?v=20261002b)
 - **Report card** (2026-W39, 24-case library): first full run the day after the 6-series launch — gpt-6-sol-900k **17/24**, gpt-6-astra-900k **16/24** (same-day control), gpt-6-luna-900k **15/24**; sol ties the cross-repo leader (opus-5.5: 17 wins · 6 losses · 1 case void due to infrastructure; see its correction, see [amber-claude W39](https://github.com/getaskclaw/amber-claude/blob/main/results/2026-W39-correction.en.md)), and the 5.6-era family pattern "luna ≥ sol" flips in the 6 series. See [W39](results/2026-W39.en.md).
-  ![W39 board composition](results/assets/2026-W39-composition.en.png)
+  ![W39 board composition](results/assets/2026-W39-composition.en.v2.png)
 - **Per-axis head-to-head** (2026-W39): the three 6-series siblings same-day plus the 5.6 predecessor side by side — gains on the judge faces (defect-hunt / attribution / review — axes about finding faults in others' work): attribution 0.47→0.93, review 0.22→0.64 (vs the 5.6 predecessor; 0 = all wrong, 1 = perfect); vision remains the heirloom weakness (vision case score sol 1.0 / luna −2; ≥ 2 passes, neither does).
   ![W39 per-axis completion](results/assets/2026-W39-axes.en.png)
 - **Report card** (2026-W37, 23-case library): luna posts the same 15/23 at all three bands, sol 14/23 at two (high band **corrected to 15/23** on the 09-16 re-test — the ui-build zero-delivery was a client-side watchdog kill, makeup 12/12; see [W38](results/2026-W38.md)), astra 16/23 on a blended tally; sol xhigh aborted and excluded.
