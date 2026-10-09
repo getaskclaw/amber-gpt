@@ -22,7 +22,9 @@ Each table cell is an axis completion value, not a pass count. The axis order is
 
 | Coding | Delivery | Ops | Requirements | UI | Vision | Defense | Attribution | Review | Convergence |
 |---|---|---|---|---|---|---|---|---|---|
-| 0.958 | 1.000 | 1.000 | 1.000 | NA | NA | 0.292 | 0.667 | NA | 1.000 |
+| 0.958 | 1.000 | 1.000 | 1.000 | NA | NA | 0.333 | 0.667 | NA | 1.000 |
+
+**Update 2026-10-09**: the Defense cell changes from 0.292 to 0.333. The old value counted A-d511f9e8 (3/12 pins, before its 10-02 hold). That case has been NA on every lane since 10-02 and is excluded under the rule above, so Defense now rests on A-be92627f alone (3/9 pins): 0.333. All other cells are unchanged.
 
 This notice is the **first public announcement of the revised rulings** for the three UI and Review cases. Their earlier public status was “held, re-exam pending”. We now publish `exonerated_infra`: capability scores withheld, NA, neither wins nor losses. This does not mean they passed or were permanently voided. Source: the “2026-09-24 appendix” in the adjudication ledger `ADJUDICATION-冤案平反-20260922.md`. That appendix now records these three papers. The cause was the old 90s/12s watchdog thresholds, a test-harness infrastructure issue. This notice cites the named dispositions, not the private case materials.
 
@@ -36,6 +38,7 @@ This notice is the **first public announcement of the revised rulings** for the 
 Vision case A-ea80d793 keeps its [earlier public held status](2026-W38-correction.en.md). Its raw completion value of 0.111 is an unused historical observation, not a valid loss in this set. Vision is now NA.
 
 There are still 16 passes in this 24-case set: **16 wins · 4 losses · 4 held**. The four unscored cases are the three with capability scores withheld and the one still awaiting re-exam. Short labels use `16'/24`. The `'` marks held or void cases: **contested (held for safety refusal) or invalid (infrastructure-related (test harness or scoring environment) cases: held, void or awaiting re-scoring); neither counts as a win or a loss**. A hold does not settle the cause. This set adds no safety-refusal finding.
+**Update 2026-10-09**: the composition above is the count before the 10-02 correction. A-d511f9e8 has been held on every lane since 10-02 (loss → NA). The current composition is **16 wins · 3 losses · 5 held** (`16'/24`): the four cases above, plus A-d511f9e8 (defense).
 
 ## Keeping the record
 
