@@ -18,19 +18,19 @@ Weekly public benchmark results of GPT-family models (across reasoning-effort ba
 
 <!-- scoreboard:start -->
 
-| Group | Axis | What it tests | gpt-5.6-luna · [W41](results/2026-W41.en.md) | gpt-5.6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6-luna · [W41](results/2026-W41.en.md) | gpt-6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6.1-sol · [W40](results/2026-W40.en.md) | gpt-6-sol-900k · [W39](results/2026-W39.en.md) | gpt-6-astra-900k · [W39](results/2026-W39.en.md) | gpt-5.6-sol-900k (high band) · [W38](results/2026-W38.md) | gpt-5.6-luna-900k (high band) · [W37](results/2026-W37.md) |
-|---|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Building | Coding | Implement the spec correctly | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 |
-|  | Delivery | Done means handed in | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 2/3 | 3/3 | 3/3 |
-|  | Ops | Follow the runbook | 5/6 | 5/6 | 5/6 · 1 NA | 5/6 · 1 NA | 4/6 · 1 NA | 5/6 · 1 NA | 5/6 · 1 NA | 5/6 | 6/6 |
-|  | Requirements | Ship A when A was asked | 1/1 | 0/1 | 0/1 | 0/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 |
-|  | Convergence | Finish, don't spin | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | — | 1/1 |
-| Judging | UI | Build the page to the mock | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 0/1 | 1/1 | 0/1 · 1 NA |
-|  | Vision | Spot defects in screenshots | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 1/1 | 0/1 · 1 NA | 0/1 · 1 NA |
-|  | Defense | Plug every hole in the validator | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA |
-|  | Attribution | Pin defects to their root cause | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 |
-|  | Review | Inspect someone else's work | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 0/2 · 2 NA | 0/2 · 2 NA |
-|  | **Total** |  | **17'/24** | **16'/24** | **16'/24** | **15'/24** | **16'/24** | **17'/24** | **16'/24** | **15'/23** | **16'/24** |
+| Group | Axis | What it tests | gpt-6.1-sol · [W41](results/2026-W41.en.md) | gpt-5.6-sol · [W41](results/2026-W41.en.md) | gpt-5.6-sol-900k (high band) · [W41](results/2026-W41.en.md) | gpt-5.6-luna · [W41](results/2026-W41.en.md) | gpt-6-astra · [W41](results/2026-W41.en.md) | gpt-6-sol · [W41](results/2026-W41.en.md) | gpt-5.6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6-luna · [W41](results/2026-W41.en.md) | gpt-5.6-terra · [W41](results/2026-W41.en.md) | gpt-6-astra-900k · [W41](results/2026-W41.en.md) | gpt-6-luna-900k · [W41](results/2026-W41.en.md) | gpt-6-sol-900k · [W39](results/2026-W39.en.md) | gpt-5.6-luna-900k (high band) · [W37](results/2026-W37.md) |
+|---|---|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Building | Coding | Implement the spec correctly | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 | 4/6 | 5/6 | 5/6 | 5/6 | 5/6 |
+|  | Delivery | Done means handed in | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 3/3 | 2/3 | 3/3 | 3/3 | 3/3 |
+|  | Ops | Follow the runbook | 5/6 · 1 NA | 5/6 | 4/6 | 5/6 | 5/6 | 5/6 | 5/6 | 5/6 · 1 NA | 5/6 | 5/6 · 1 NA | 5/6 · 1 NA | 5/6 · 1 NA | 6/6 |
+|  | Requirements | Ship A when A was asked | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 |
+|  | Convergence | Finish, don't spin | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 |
+| Judging | UI | Build the page to the mock | 1/1 | 1/1 | 1/1 | 1/1 | 0/1 | 1/1 | 1/1 | 1/1 | 1/1 | 0/1 | 0/1 | 1/1 | 0/1 · 1 NA |
+|  | Vision | Spot defects in screenshots | 1/1 | 1/1 | 1/1 | 1/1 | 1/1 | 0/1 | 0/1 | 0/1 | 0/1 | 1/1 | 0/1 | 0/1 | 0/1 · 1 NA |
+|  | Defense | Plug every hole in the validator | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA | 0/2 · 1 NA |
+|  | Attribution | Pin defects to their root cause | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 | 0/1 |
+|  | Review | Inspect someone else's work | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 0/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 0/2 · 1 NA | 1/2 · 1 NA | 1/2 · 1 NA | 0/2 · 2 NA |
+|  | **Total** |  | **18'/24** | **18'/24** | **17'/24** | **17'/24** | **17'/24** | **17'/24** | **16'/24** | **16'/24** | **16'/24** | **15'/24** | **15'/24** | **17'/24** | **16'/24** |
 
 Each cell = cases passed / cases on that axis (a case is one scored task). NA = the case was voided or put on hold; it counts as neither a pass nor a fail, and a total carrying `'` contains at least one NA. Most axes hold only 1–2 cases, so one case moves the reading: do not over-read small gaps. Sittings are from different weeks; every number is a snapshot.
 
